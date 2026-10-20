@@ -1,0 +1,48 @@
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ambientes virtuais
+.venv/
+venv/
+env/
+
+# Variáveis de ambiente e credenciais
+.env
+.env.*
+!.env.example
+
+# Distribuição e instalação
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Ferramentas de desenvolvimento
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# IDEs e sistema operacional
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Dados locais do projeto
+data/raw/*
+data/processed/*
+
+# Preservar as pastas de dados no Git
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Arquivos temporários e logs
+*.log
+*.tmp
+*.bak

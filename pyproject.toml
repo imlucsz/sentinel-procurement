@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=75.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "public-procurement-monitor"
+version = "0.1.0"
+description = "Monitoramento de discrepâncias de preços em contratações públicas brasileiras usando dados do PNCP."
+requires-python = ">=3.12"
+dependencies = [
+    "httpx",
+    "polars",
+    "duckdb",
+    "pyarrow",
+    "scipy",
+    "streamlit",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "ruff",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
